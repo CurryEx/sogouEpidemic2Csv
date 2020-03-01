@@ -1,12 +1,10 @@
 # author: Curry
-import pandas as pd
 import json
-from matplotlib import pyplot as plt 
 import csv
 import codecs
 import requests
 import time
-import os
+
 resp = requests.get("http://sa.sogou.com/new-weball/api/sgs/epidemic/all-chart/data")
 jsData = json.loads(resp.text)
 csvFile = open("./data/{}.csv".format(time.strftime("%m-%d")), "w", newline='', encoding='gbk')
